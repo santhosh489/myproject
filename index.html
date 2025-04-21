@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IPL 2024 Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Body with full background image */
+    body {
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      background: url('https://i.pinimg.com/736x/1a/37/d0/1a37d0d9fcabd70682d880a61463899d.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding-bottom: 60px; /* Space for footer */
+    }
+
+    /* Form container */
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      width: 350px;
+      max-width: 90%;
+      text-align: center;
+      z-index: 1;
+    }
+
+    h2 {
+      color: #0062cc;
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #0062cc;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #004ea2;
+    }
+
+    .link-text {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .link-text a {
+      color: #0062cc;
+      text-decoration: none;
+    }
+
+    .link-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer fixed at bottom */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #0062cc;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      z-index: 0;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 400px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>IPL 2024 Login</h2>
+    <form id="loginForm" onsubmit="return validateLoginForm()">
+      <div class="input-group">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" required />
+      </div>
+
+      <button type="submit">Login</button>
+
+      <p class="link-text">Don’t have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </div>
+
+  <footer>© 2025 IPL 2024 Fan Club</footer>
+
+  <script>
+    function validateLoginForm() {
+      const email = document.getElementById("login-email").value;
+      const password = document.getElementById("login-password").value;
+
+      if (!email || !password) {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      // Redirect to home.html on successful login
+      alert("Login successful!");
+      window.location.href = "home.html"; 
+      return false; 
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2024 Stats</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #000000, #330000); /* Fiery gradient */
+            color: #f8f8f2;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 20px 0;
+            color: #ff6600; /* Bold orange */
+            text-shadow: 2px 2px 8px #ff3300; /* Fiery glow */
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 80, 0, 0.2);
+            border: 2px solid #ff6600;
+            border-radius: 10px;
+            width: 300px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 15px #ff3300;
+            transition: transform 0.3s ease, background-color 0.2s ease;
+            text-align: center;
+        }
+        
+        .stat1-card {
+            background: rgba(255, 80, 0, 0.2);
+            border: 2px solid #ff6600;
+            border-radius: 10px;
+            width: 300px;
+            height:150px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 15px #ff3300;
+            transition: transform 0.3s ease, background-color 0.2s ease;
+            text-align: center;
+        }
+        .stat-card:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 80, 0, 0.5);
+        }
+
+        .stat-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 5px #ff6600;
+        }
+        .trophy
+        {
+            width:300px;
+            height:260px;
+        }
+
+        .player-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ff6600;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px #ff3300;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .animated-flame {
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(to right, #ff3300, #ff9900);
+            box-shadow: 0px 0px 10px #ff6600;
+            animation: flameFlow 1.5s infinite alternate-reverse;
+        }
+
+        @keyframes flameFlow {
+            0% {
+                transform: scaleX(0.8);
+            }
+            100% {
+                transform: scaleX(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>IPL 2024 Stats</h1>
+    <div class="stats-container">
+        <!-- Example Stat Cards -->
+        <div class="stat-card">
+            <img src="https://i.pinimg.com/736x/79/40/54/794054afd7d178fc4693235da3e1417b.jpg" alt="Virat Kohli" class="player-photo">
+            <h2 class="stat-title">Orange Cap</h2>
+            <p class="stat-value">Player: Virat Kohli</p>
+            <p class="stat-value">Runs: 741</p>
+            <div class="animated-flame"></div>
+        </div>
+        <div class="stat-card">
+            <img src="https://i.pinimg.com/736x/f9/91/89/f991890cf2baadef309748947a511a6b.jpg" alt="Trophy" class="trophy">
+        </div>
+        <!-- Emerging Player -->
+        <div class="stat-card">
+            <img src="https://i.pinimg.com/736x/55/8e/7c/558e7c8573b5334b6eee7aea1a644c73.jpg" alt="Harshal Patel" class="player-photo">
+            <h2 class="stat-title">Purple Cap</h2>
+            <p class="stat-value">Player: Harshal Patel</p>
+            <p class="stat-value">Wickets: 24</p>
+            <div class="animated-flame"></div>
+        </div>
+        <div class="stat-card">
+            <img src="https://i.pinimg.com/736x/39/11/d9/3911d92c6139c83ad48edef8336c601f.jpg" alt="Emerging Player" class="player-photo">
+            <h2 class="stat-title">Emerging Player</h2>
+            <p class="stat-value">Player: Nitish Kumar Reddy</p>
+            <p class="stat-value">Runs: 303 | Wickets: 3</p>
+            <div class="animated-flame"></div>
+        </div>
+        <div class="stat-card">
+            <img src="https://i.pinimg.com/736x/91/a4/29/91a4297aec9b5ef0bccb6e61e4195484.jpg" alt="KKR" class="player-photo">
+            <h2 class="stat-title">Best Team</h2>
+            <p class="stat-value">Team: Kolkata Knight Riders</p>
+            <p class="stat-value">Points: 18</p>
+            <div class="animated-flame"></div>
+        </div>
+        <div class="stat-card">
+            <img src="https://i.pinimg.com/736x/2f/b6/49/2fb649be4ec000c8492eb5df1b6be646.jpg
+            " alt="Narine" class="player-photo">
+            <h2 class="stat-title">MVP</h2>
+            <p class="stat-value">Team: Kolkata Knight Riders</p>
+            <p class="stat-value">Runs: 488 | Wickets: 17</p>
+            <div class="animated-flame"></div>
+        </div>
+
+    <div class="stat1-card">
+        <!-- <img src="sixes_icon.jpg" alt="Sixes Icon" class="player-photo"> -->
+        <h2 class="stat-title">No. of Sixes</h2>
+        <p class="stat-value">1260</p>
+        <div class="animated-flame"></div>
+    </div>
+        <!-- No. of Fours -->
+        <div class="stat1-card">
+            <!-- <img src="fours_icon.jpg" alt="Fours Icon" class="player-photo"> -->
+            <h2 class="stat-title">No. of Fours</h2>
+            <p class="stat-value">2174</p>
+            <div class="animated-flame"></div>
+        </div>
+    </div>
+</body>
+</html>

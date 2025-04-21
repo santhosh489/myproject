@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+    <title>IPL 2024 - Magic Moments</title>
+    <style>
+        /* Base styles (Light Theme by default) */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #264cff;
+            color: white;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 80%;
+            margin: 30px auto;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 70%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            width: 70%;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+            outline: none;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Dark Theme Styles */
+        body.dark {
+            background: #121212;
+            color: #f0f0f0;
+        }
+
+        header.dark {
+            background: #121212;
+        }
+
+        nav ul li a.dark {
+            color: #ff8c00;
+        }
+
+        .caption.dark {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ff8c00;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #264cff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .theme-toggle.dark {
+            background: #ff8c00;
+            color: #130202;
+        }
+    </style>
+</head>
+<body>
+    <header class="dark">
+        <h1>🏏 IPL 2024</h1>
+        <nav>
+            <ul>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="points.html">Points Table</a></li>
+                <li><a href="stats.html">Stats</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider-container">
+        <h2>✨ Key Moments</h2>
+        <div class="slides">
+            <div class="slide">
+                <img src="https://i.pinimg.com/736x/d9/da/33/d9da3321024a3b0a30705dd7d2c0b8de.jpg" alt="Magic Moment 1">
+                <div class="caption">🔥 Sunrisers Hyderabad's record-breaking score: SRH posted the highest total in IPL history, 287/3!</div>
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/736x/03/95/47/039547af4c487368f7907a8da1196411.jpg" alt="Magic Moment 2">
+                <div class="caption">🏏 Rishabh Pant Returns As Opener After 3246 Days!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const header = document.querySelector('header');
+            const captions = document.querySelectorAll('.caption');
+            const themeToggle = document.querySelector('.theme-toggle');
+
+            // Toggle dark class
+            body.classList.toggle('dark');
+            header.classList.toggle('dark');
+            themeToggle.classList.toggle('dark');
+
+            captions.forEach(caption => {
+                caption.classList.toggle('dark');
+            });
+        }
+
+        let slideIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function showSlide(index) {
+            if (index >= totalSlides) slideIndex = 0;
+            if (index < 0) slideIndex = totalSlides - 1;
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        setInterval(() => {
+            nextSlide();
+        }, 5000); // Auto-slide every 5 seconds
+    </script>
+</body>
+</html>
